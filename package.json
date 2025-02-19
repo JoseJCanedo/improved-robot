@@ -1,0 +1,23 @@
+{
+  "name": "improved-robot",
+  "version": "1.0.0",
+  "description": "node js example app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseJCanedo/improved-robot.git"
+  },
+  "author": "Jose Canedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseJCanedo/improved-robot/issues"
+  },
+  "homepage": "https://github.com/JoseJCanedo/improved-robot#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
