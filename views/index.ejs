@@ -7,7 +7,25 @@
     </head>
 
     <body>
-        <h1>Welcome, <%= userName %>!</h1>
-        <p>This is a simple EJS template example.</p>
+        <h1>Welcome, to your to do app!</h1>
+        <p>To get started add an item to your list.</p>
+        <div>
+            <form action="/add" method="POST">
+                <input type="text" name="newTask" placeholder="Add a new task"/>
+                <button>
+                    Add Task
+                </button>
+            </form>
+        </div>
+        <div>
+            <form action="/done" method="POST">
+                <% for(var i = 0; i < tasks.length; i++){ %>
+                    <li><input type="checkbox" name="task" value="<%= tasks[i] %>"><%= tasks[i] %></li>
+                <% } %>
+                <button>
+                    Complete Task
+                </button>
+            </form>
+        </div>
     </body>
 </html>
