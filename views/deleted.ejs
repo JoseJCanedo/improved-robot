@@ -30,25 +30,17 @@
         </div>
     </nav>
     <h1>Welcome, to your to do app!</h1>
-    <p>To get started add an item to your list.</p>
+    <p>Your past Items</p>
     <div>
-        <form action="/add" method="POST">
-            <input type="text" name="newTask" placeholder="Add a new task" />
-            <button>
-                Add Task
-            </button>
-        </form>
-    </div>
-    <div>
-        <form action="/done" method="POST">
-            <% for(var i=0; i < todoList.length; i++){ %>
+        <form action="/delete" method="POST">
+            <% for(var i=0; i < doneList.length; i++){ %>
                 <li>
-                    <input type="checkbox" name="task" value="<%= todoList[i]._id %>">
-                    <%= todoList[i].taskName %>
+                    <input type="checkbox" name="task" value="<%= doneList[i]._id %>">
+                    <%= doneList[i].taskName %>
                 </li>
                 <% } %>
                 <button>
-                    Complete Task
+                    Delete Task
                 </button>
         </form>
     </div>
